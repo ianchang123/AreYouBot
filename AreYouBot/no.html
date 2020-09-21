@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="Sounds.js"></script>
+    <script src="Game.js"></script>
+    <title>Are You a Robot?</title>
+    <link rel="stylesheet" href="nostyle.css">
+    <script>
+        var game = new Game();
+    </script>
+</head>
+<body>
+    <div id="countdownTimer">
+        30 seconds
+    </div>
+    <div id="testBox">
+
+        <div id="testBoxHeader">
+            Click Confirm to move onto next stage.
+        </div>
+
+        <div id="testBoxBody">
+            <img src="images/neutral-face.png" alt="pic" id="image0" class="GridItem" onclick=game.updateCurrentAnswer(0)>
+            <img src="images/neutral-face.png" alt="pic" id="image1" class="GridItem" onclick=game.updateCurrentAnswer(1)>
+            <img src="images/neutral-face.png" alt="pic" id="image2" class="GridItem" onclick=game.updateCurrentAnswer(2)>
+            <img src="images/neutral-face.png" alt="pic" id="image3" class="GridItem" onclick=game.updateCurrentAnswer(3)>
+            <img src="images/neutral-face.png" alt="pic" id="image4" class="GridItem" onclick=game.updateCurrentAnswer(4)>
+            <img src="images/neutral-face.png" alt="pic" id="image5" class="GridItem" onclick=game.updateCurrentAnswer(5)>
+            <img src="images/neutral-face.png" alt="pic" id="image6" class="GridItem" onclick=game.updateCurrentAnswer(6)>
+            <img src="images/neutral-face.png" alt="pic" id="image7" class="GridItem" onclick=game.updateCurrentAnswer(7)>
+            <img src="images/neutral-face.png" alt="pic" id="image8" class="GridItem" onclick=game.updateCurrentAnswer(8)>
+            <img src="images/neutral-face.png" alt="pic" id="image9" class="GridItem" onclick=game.updateCurrentAnswer(9)>
+            <img src="images/neutral-face.png" alt="pic" id="image10" class="GridItem" onclick=game.updateCurrentAnswer(10)>
+            <img src="images/neutral-face.png" alt="pic" id="image11" class="GridItem" onclick=game.updateCurrentAnswer(11)>
+            <img src="images/neutral-face.png" alt="pic" id="image12" class="GridItem" onclick=game.updateCurrentAnswer(12)>
+            <img src="images/neutral-face.png" alt="pic" id="image13" class="GridItem" onclick=game.updateCurrentAnswer(13)>
+            <img src="images/neutral-face.png" alt="pic" id="image14" class="GridItem" onclick=game.updateCurrentAnswer(14)>
+            <img src="images/neutral-face.png" alt="pic" id="image15" class="GridItem" onclick=game.updateCurrentAnswer(15)>
+        </div>
+
+        <div id="testBoxFooter">
+            <button id="confirmButton" onclick=game.submitAnswer()>Confirm</button>
+        </div>
+
+    </div>
+    <script>
+        alert("(WARNING: TURN DOWN VOLUME)\nSelect all smiley emojis to prove you are human. You will have 30 seconds to complete this test. Click OK to begin.");
+        game.updateImages();
+        setInterval(function() {game.updateEverySecond(); }, 1000);
+    </script>
+</body>
+</html>
+<audio autoplay loop src="sounds/Dark Souls III Soundtrack OST - Soul of Cinder.mp3"></audio>

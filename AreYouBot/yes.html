@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Are You a Robot?</title>
+    <link rel="stylesheet" href="yesstyle.css">
+</head>
+<body>
+    <header>
+        <div>OMG!!!!!!!</div>
+    </header>
+
+    <section>
+        <img src="images/rainbow-frog.gif" alt="">
+    </section>
+
+    <footer>
+        
+    </footer>
+
+    <script>
+        var timeLeft = 10;
+        function updateEverySecond() {
+            if (this.timeLeft <= 0) {
+                document.location.href = "startagainpage.html";
+            }
+            else {
+                this.timeLeft -= 1;
+            }
+        }
+        setInterval(function() {updateEverySecond(); }, 1000);
+    </script>
+</body>
+</html>
+<audio autoplay>
+    <source src="sounds/MLGKidScreaming.mp3" type="audio/mp3">
+</audio>

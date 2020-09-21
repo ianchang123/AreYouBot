@@ -1,0 +1,93 @@
+body {
+    font-family: Helvetica, Arial, Georgia;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+header div {
+    font-size: xx-large;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.slideshow {
+    background-image: url("images/thinking-face.png");
+    background-position: center;
+    background-repeat: repeat-x;
+    height: 150px;
+    width: 300%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+#topSlideshow {
+    animation: slideshow 30s linear infinite;
+    animation-direction: reverse;
+}
+
+#bottomSlideshow {
+    animation: slideshow 30s linear infinite;
+}
+
+#divider {
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes slideshow {
+    0%  { left: 0; }
+    100% { left: -200%; }
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section button {
+    font-size: xx-large;
+    color: black;
+}
+
+footer .slideshow {
+    position: absolute;
+    bottom: 5%;
+}
+
+section button:hover {
+    border-color: red;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+a:active {
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-height: 500px) {
+    .slideshow {
+        display: none;
+    }
+}
